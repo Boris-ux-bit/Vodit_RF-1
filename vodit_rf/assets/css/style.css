@@ -1,0 +1,290 @@
+/* =====================================================
+   СТИЛИ ДЛЯ ПОРТАЛА «Водить.РФ»
+   Вариант №1
+   ===================================================== */
+
+/* ----- ОБНУЛЕНИЕ И БАЗОВЫЕ НАСТРОЙКИ ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ----- КОНТЕЙНЕР ДЛЯ ВСЕХ СТРАНИЦ ----- */
+.container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ----- ШАПКА ----- */
+.header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* ----- ОСНОВНОЙ КОНТЕНТ ----- */
+.content {
+    padding: 30px 20px;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3c72;
+}
+
+/* ----- ФОРМЫ ----- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #1e3c72;
+    box-shadow: 0 0 0 3px rgba(30,60,114,0.1);
+}
+
+/* ----- КНОПКИ ----- */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(30,60,114,0.4);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    margin-top: 10px;
+}
+
+/* ----- СООБЩЕНИЯ ----- */
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #e74c3c;
+    animation: shake 0.4s ease;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.field-error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ----- ТАБЛИЦЫ ----- */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+/* ----- ССЫЛКИ-КНОПКИ ----- */
+.action-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #1e3c72;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.action-link:hover {
+    background: #2a5298;
+}
+
+/* ----- НАВИГАЦИЯ ----- */
+.nav-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.nav-links a {
+    color: #1e3c72;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* ----- ПОДСКАЗКА ДЛЯ АДМИНА ----- */
+.admin-hint {
+    text-align: center;
+    margin-top: 20px;
+    padding: 12px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.admin-hint strong {
+    color: #1e3c72;
+}
+
+hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* ----- АНИМАЦИИ ----- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* ----- АДАПТАЦИЯ ПОД ТЕЛЕФОН 390x844 ----- */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        border-radius: 15px;
+    }
+    
+    .header h1 {
+        font-size: 24px;
+    }
+    
+    .content {
+        padding: 20px 15px;
+    }
+    
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+    
+    .btn {
+        padding: 12px;
+    }
+}
+
+.btn,
+.btn-primary,
+.btn-secondary,
+a.btn,
+button.btn {
+    color: #ffffff !important;
+}
+
+.btn span,
+.btn .btn-text {
+    color: #ffffff !important;
+}
+
+
+button,
+input[type="submit"],
+a.btn {
+    color: #ffffff !important;
+}
